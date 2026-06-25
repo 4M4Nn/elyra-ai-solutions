@@ -1,25 +1,27 @@
-import type { Metadata } from "next"
-import CinematicOpening from "@/components/sections/CinematicOpening"
-import Hero from "@/components/sections/Hero"
-import ElyraServices from "@/components/sections/ElyraServices"
-import ElyraCaseStudies from "@/components/sections/ElyraCaseStudies"
-import ElyraFAQ from "@/components/sections/ElyraFAQ"
-import ElyraContact from "@/components/sections/ElyraContact"
-
-export const metadata: Metadata = {
-  title: "Elyra AI Solutions — AI Employees for Modern Business",
-  description: "AI agents that work 24/7 — lead nurturing, sales, recruitment, and customer support. Kerala's #1 AI automation company.",
-}
+import LoadingScreen from "@/components/loading/LoadingScreen"
+import HeroSection from "@/components/sections/HeroSection"
+import NumbersSection from "@/components/sections/NumbersSection"
+import ServicesSection from "@/components/sections/ServicesSection"
+import StatementSection from "@/components/sections/StatementSection"
+import UseCasesSection from "@/components/sections/UseCasesSection"
+import TestimonialsSection from "@/components/sections/TestimonialsSection"
+import ContactSection from "@/components/sections/ContactSection"
+import MobileStickyBar from "@/components/ui/MobileStickyBar"
 
 export default function HomePage() {
   return (
-    <main>
-      <CinematicOpening />
-      <Hero />
-      <ElyraServices />
-      <ElyraCaseStudies />
-      <ElyraFAQ />
-      <ElyraContact />
-    </main>
+    <>
+      <LoadingScreen />
+      <main>
+        <HeroSection />
+        <NumbersSection />
+        <ServicesSection />
+        <StatementSection />
+        <UseCasesSection />
+        <TestimonialsSection />
+        <ContactSection />
+      </main>
+      <MobileStickyBar />
+    </>
   )
 }
